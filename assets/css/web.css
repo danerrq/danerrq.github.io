@@ -551,3 +551,73 @@ a { color: inherit; }
 .pie-info a { color: var(--texto); text-decoration: underline; text-underline-offset: 3px; }
 .pie-info a:hover { color: var(--morado-claro); }
 .nota-estilos { font-size: 12px; line-height: 1.5; color: var(--tinta-tenue); max-width: 56ch; margin-inline: auto; text-align: center; }
+
+/* ===== v5 · planes (mensual, anual, de por vida) ===== */
+#precio .envoltura { display: grid; gap: 22px; }
+#precio .cabeza { margin-bottom: 6px; }
+.planes { display: grid; gap: 16px; align-items: stretch; }
+@media (min-width: 900px) { .planes { grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: center; } }
+.plan { position: relative; min-width: 0; display: grid; gap: 16px; align-content: start; padding: clamp(22px, 3vw, 30px); border-radius: 26px; background: #ffffff0d; border: 1px solid #C4B5FD40; }
+.plan h3 { font: 700 19px/1.2 var(--f-display); letter-spacing: -.02em; }
+.plan-cifra { display: flex; align-items: flex-end; gap: 8px; flex-wrap: wrap; }
+.plan-cifra .moneda { font: 700 16px/1 var(--f-display); color: #DDD6FE; padding-bottom: 8px; }
+.plan-cifra b { font: 800 clamp(56px, 8vw, 72px)/.85 var(--f-display); letter-spacing: -.05em; color: #fff; font-variant-numeric: tabular-nums; }
+.plan-cifra .per { font-size: 15px; font-weight: 600; color: #DDD6FE; padding-bottom: 8px; }
+.plan-sub { font-size: 15px; color: #DDD6FE; }
+.plan-sub b { color: #fff; }
+.plan .equivale { display: block; font-size: 13px; color: #C9BEF0; margin-top: 2px; }
+.plan .incluye { grid-template-columns: 1fr; }
+.plan .btn.bloque { white-space: normal; text-align: center; }
+.plan.destacado { background: linear-gradient(180deg, #7C3AED40, #ffffff0d 70%); border: 2px solid var(--amarillo); box-shadow: 0 40px 90px -45px #000, 0 0 0 6px #FFE14D1a; padding-top: clamp(30px, 3.5vw, 40px); }
+@media (min-width: 900px) { .plan.destacado { padding-block: 44px; } }
+.sello-plan { position: absolute; top: 0; left: 50%; transform: translate(-50%, -50%); background: var(--amarillo); color: var(--tinta); font: 800 11px/1 var(--f-texto); letter-spacing: .14em; padding: 8px 14px; border-radius: 999px; white-space: nowrap; box-shadow: 0 8px 20px -8px #000; }
+@media (max-width: 899px) { .plan.destacado { order: -1; margin-top: 10px; } }
+
+.tabla-planes { display: grid; gap: 12px; padding: clamp(18px, 3vw, 28px); border-radius: 24px; background: #00000033; border: 1px solid #ffffff1f; min-width: 0; }
+.tabla-planes h3 { font: 700 18px/1.2 var(--f-display); letter-spacing: -.02em; }
+.tabla-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.tabla-planes table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.tabla-planes th, .tabla-planes td { padding: 10px 6px; border-bottom: 1px solid #ffffff17; text-align: center; vertical-align: middle; }
+.tabla-planes thead th { font-size: 12px; font-weight: 700; color: #DDD6FE; line-height: 1.25; }
+.tabla-planes tbody th { text-align: left; font-weight: 500; color: #fff; padding-left: 0; }
+.tabla-planes tbody tr:last-child > * { border-bottom: 0; }
+.tabla-planes th.terminado, .tabla-planes td:last-child { background: #ffffff0a; }
+.tabla-planes .si { width: 18px; height: 18px; color: var(--amarillo); vertical-align: middle; }
+.tabla-planes td:last-child .si { color: var(--ok); }
+.tabla-planes .no { color: #ffffff55; }
+.vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.nota-planes { font-size: 14px; color: #DDD6FE; }
+@media (max-width: 520px) {
+  .tabla-planes table { font-size: 13px; }
+  .tabla-planes thead th { font-size: 11px; }
+  .tabla-planes th, .tabla-planes td { padding: 9px 3px; }
+  .tabla-planes tbody th { padding-left: 0; min-width: 118px; }
+}
+
+/* ===== v5 · instálalo en 4 pasos ===== */
+.instalar { display: grid; gap: clamp(24px, 4vw, 56px); align-items: center; }
+@media (min-width: 900px) { .instalar { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
+.instalar .cabeza { margin-bottom: 0; min-width: 0; }
+.pasos-instalar { margin: 8px 0 0; padding: 0; list-style: none; counter-reset: paso; display: grid; gap: 12px; }
+.pasos-instalar li { counter-increment: paso; position: relative; padding: 5px 0 0 48px; min-height: 34px; font-size: 16px; color: var(--tinta-tenue); }
+.pasos-instalar li::before { content: counter(paso); position: absolute; left: 0; top: 0; display: grid; place-items: center; width: 34px; height: 34px; border-radius: 10px; background: var(--morado); color: #fff; font: 800 15px/1 var(--f-display); }
+.pasos-instalar li:last-child::before { background: #F59E0B; }
+.pasos-instalar b { color: var(--tinta); }
+.pasos-instalar code { font: 600 14px ui-monospace, SFMono-Regular, Menlo, monospace; background: var(--tinta); color: var(--amarillo); padding: 2px 7px; border-radius: 6px; white-space: nowrap; }
+.img-instalar { position: relative; display: block; max-width: 560px; width: 100%; justify-self: center; border-radius: 24px; overflow: hidden; box-shadow: 0 40px 80px -40px #1C1B1F99; text-decoration: none; }
+.img-instalar img { display: block; width: 100%; height: auto; }
+.img-instalar .ampliar { position: absolute; right: 12px; top: 12px; background: #fff; color: var(--tinta); font: 600 12px var(--f-texto); padding: 7px 11px; border-radius: 999px; }
+@media (min-width: 900px) { .img-instalar .ampliar { display: none; } }
+#preguntas .resp a { color: var(--morado-claro); }
+@media (max-width: 420px) { .hero .acciones .btn.comprar { width: 100%; padding: 0 16px; gap: 8px; font-size: 15px; } .hero .acciones .btn.comprar .precio-btn { padding-left: 8px; } }
+
+/* ===== v6 · plan Gratis ===== */
+.plan.gratis { background: #00000026; border-style: dashed; }
+.plan.gratis .plan-cifra b { color: #DDD6FE; }
+.plan .incluye li.bloq { color: #C9BEF0; }
+.plan .incluye li.bloq svg { color: #C9BEF0; }
+.tabla-planes .txt-celda { font-size: 12px; font-weight: 600; color: #DDD6FE; line-height: 1.25; display: inline-block; }
+.tabla-planes th.col-gratis, .tabla-planes td:nth-child(2) { background: #ffffff0a; }
+.tabla-planes th.terminado, .tabla-planes td:last-child { background: none; }
+.tabla-planes td:last-child .si { color: var(--amarillo); }
+@media (max-width: 899px) { .plan.gratis { order: 2; } }

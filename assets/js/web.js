@@ -1,13 +1,11 @@
 /* Nilo Studio · web de venta v2 */
 
 // ── Ajustes ───────────────────────────────────────────────────────────────
-// Enlace de pago de Gumroad con la oferta de lanzamiento aplicada (USD 19; el descuento caduca en OFERTA_FIN).
-const CHECKOUT_URL = 'https://gumroad.com/l/nilostudio/LANZAMIENTO';
-// Enlace de pago al precio normal (USD 29). Se usa cuando OFERTA_FIN ya pasó.
-const CHECKOUT_URL_NORMAL = 'https://gumroad.com/l/nilostudio';
-// Oferta de lanzamiento: termina el 1-12-2026 a las 23:59 hora de Bogotá (UTC−5).
+// Planes Pro mensual y Pro anual: el mismo producto de suscripción de Gumroad (aún no existe: créalo con ese enlace).
+const PLAN_SUSCRIPCION_URL = 'https://gumroad.com/l/nilostudio-pro';
+const PLAN_MENSUAL = 9, PLAN_ANUAL = 79; // USD
+// Sin usar: oferta de lanzamiento desactivada al pasar a planes. Se deja por si se reactiva.
 const OFERTA_FIN = '2026-12-02T04:59:00Z';
-const PRECIO_NORMAL = 29, PRECIO_OFERTA = 19;
 // Vídeo demo vertical 9:16 (p. ej. 'assets/video/demo.mp4'). Vacío = rotan los ejemplos reales.
 const VIDEO_DEMO_URL = '';
 const VIDEO_DEMO_POSTER = '';
@@ -35,28 +33,16 @@ const ESTILOS = [["as-whiteboard","Pizarra blanca"],["as-chalkboard","Pizarra de
 const aviso = $('#aviso');
 let avisoT;
 const avisar = t => { aviso.textContent = t; aviso.classList.add('ver'); clearTimeout(avisoT); avisoT = setTimeout(() => aviso.classList.remove('ver'), 3200); };
-const finOferta = Date.parse(OFERTA_FIN);
-const hayOferta = () => Date.now() < finOferta;
-function aplicarPrecio() {
-  const oferta = hayOferta();
-  const url = oferta ? CHECKOUT_URL : CHECKOUT_URL_NORMAL;
-  $$('[data-precio]').forEach(el => (el.textContent = oferta ? PRECIO_OFERTA : PRECIO_NORMAL));
-  $$('[data-oferta]').forEach(el => (el.hidden = !oferta));
-  const sub = $('[data-fija-sub]');
-  if (sub) sub.textContent = oferta ? `Antes USD ${PRECIO_NORMAL} · lanzamiento` : 'Pago único · garantía 14 días';
-  $$('[data-comprar]').forEach(a => { a.href = url; a.rel = 'noopener'; });
-}
-aplicarPrecio();
-// cuenta atrás (hero y precio). Al llegar a cero la oferta desaparece sola.
-const dos = n => String(n).padStart(2, '0');
-let relojT;
-function tic() {
-  const r = Math.max(0, finOferta - Date.now());
-  const d = Math.floor(r / 864e5), h = Math.floor(r / 36e5) % 24, m = Math.floor(r / 6e4) % 60, sg = Math.floor(r / 1e3) % 60;
-  $$('[data-reloj]').forEach(el => { $('[data-d]', el).textContent = d; $('[data-h]', el).textContent = dos(h); $('[data-m]', el).textContent = dos(m); $('[data-s]', el).textContent = dos(sg); });
-  if (!r) { clearInterval(relojT); aplicarPrecio(); }
-}
-if (hayOferta()) { tic(); relojT = setInterval(tic, 1000); }
+const PLANES = {
+  mensual: { precio: PLAN_MENSUAL, url: PLAN_SUSCRIPCION_URL },
+  anual: { precio: PLAN_ANUAL, url: PLAN_SUSCRIPCION_URL }
+};
+$$('[data-plan-precio]').forEach(el => (el.textContent = PLANES[el.dataset.planPrecio].precio));
+$$('[data-plan-mes]').forEach(el => (el.textContent = (PLANES[el.dataset.planMes].precio / 12).toFixed(2).replace('.', ',')));
+$$('[data-plan]').forEach(a => { a.href = PLANES[a.dataset.plan].url; a.target = '_blank'; a.rel = 'noopener'; });
+// Enlaces a una pregunta (#contacto, #como-instalar): la abren además de llevar a ella.
+function abrirPregunta() { const d = location.hash.length > 1 && document.getElementById(location.hash.slice(1)); if (d && d.tagName === 'DETAILS') d.open = true; }
+addEventListener('hashchange', abrirPregunta); abrirPregunta();
 
 /* ---------- barra de compra fija en el móvil ---------- */
 const fija = $('#compra-fija'), hero = $('.hero'), precio = $('#precio'), finalS = $('.final');
@@ -73,7 +59,7 @@ if (hayIO) {
 }
 
 /* ---------- cinta ---------- */
-const frases = ['No vas a editar nada', 'Idea → vídeo', 'Con tu voz', 'Subtítulos y portada', '4 redes', 'Más de 180 estilos', 'En español', 'USD 29, una vez'];
+const frases = ['No vas a editar nada', 'Idea → vídeo', 'Con tu voz', 'Subtítulos y portada', '4 redes', 'Más de 180 estilos', 'En español', 'Desde USD 9 al mes'];
 $('#cinta').innerHTML = [...frases, ...frases, ...frases, ...frases].map(f => `<span>${f}</span>`).join('');
 
 /* ---------- vídeos: solo se reproducen cuando se ven ---------- */
