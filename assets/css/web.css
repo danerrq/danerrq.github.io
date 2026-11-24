@@ -546,3 +546,7 @@ a { color: inherit; }
 .compra-fija .txt b span { font: inherit; color: inherit; }
 .antes s { background: none !important; text-decoration: line-through; text-decoration-thickness: 2px; text-decoration-color: transparent; transition: text-decoration-color .6s var(--ease); transition-delay: calc(var(--i) * 140ms + 200ms); }
 .comparador.visto .antes s, .comparador:not(.anima) .antes s { text-decoration-color: #E0A800; }
+.pie-info { display: grid; gap: 4px; font-size: 13px; color: var(--tenue); }
+@media (min-width: 760px) { .pie-info { grid-column: 1 / -1; } }
+.pie-info a { color: var(--texto); text-decoration: underline; text-underline-offset: 3px; }
+.pie-info a:hover { color: var(--morado-claro); }

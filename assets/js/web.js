@@ -20,11 +20,15 @@ const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 const ico = (id, w = 14) => `<svg width="${w}" height="${w}" aria-hidden="true"><use href="#i-${id}"/></svg>`;
 const hayIO = 'IntersectionObserver' in window;
 
-/* Vídeos reales (recortados, sin logo ni sonido) */
+/* Vídeos reales (recortados, sin logo ni sonido). Solo estilos incluidos en la app:
+   motor propio (café), HyperFrames (canal), animation-styles (ciclovía) y pixelfx (Egipto).
+   Nada de packs opcionales de terceros (Lemo-Opuscar). */
 const CLIPS = [
-  ['ciclovia', 'Maqueta 3D'], ['cafe', 'Ilustración plana'], ['picante', 'Libreta dibujada'],
-  ['cohete', 'Cine nocturno'], ['canal', 'Corte transversal'], ['egipto', 'Pixel art'], ['banano', 'Terminal retro']
+  ['ciclovia', 'Isla low-poly'], ['cafe', 'Motor Nilo Studio'], ['canal', 'Explicador plano'], ['egipto', 'Pixel art'],
+  ['ciclovia2', 'Isla low-poly'], ['egipto2', 'Pixel art']
 ];
+// En el hero, un clip por estilo para que los tres celulares nunca repitan estilo
+const CLIPS_HERO = ['ciclovia', 'cafe', 'canal', 'egipto'];
 const ESTILOS = [["as-whiteboard","Pizarra blanca"],["as-chalkboard","Pizarra de tiza"],["as-notepad_doodle","Garabatos de libreta"],["as-blueprint","Plano técnico"],["as-hand_drawn","Lápiz a mano"],["as-urban_sketch","Boceto urbano"],["as-crayon_book","Libro de crayolas"],["as-watercolour","Acuarela"],["as-one_line","Una sola línea"],["as-cel_line_boil","Línea viva"],["as-flat_vector","Vector plano"],["as-cel_anime_80s","Anime de los 80"],["as-stick_figure","Monigotes"],["as-cut_out","Collage"],["as-red_papercut","Papel recortado"],["as-paper_pop_up","Libro desplegable"],["as-shadow_puppet","Sombras chinescas"],["as-woodcut","Grabado en madera"],["as-engraving","Grabado antiguo"],["as-silkscreen_poster","Serigrafía"],["as-ukiyo_e","Ukiyo-e"],["as-art_deco","Art déco"],["as-stained_glass","Vitral"],["as-memphis_diorama","Diorama Memphis"],["as-sticker_explainer","Pegatinas"],["as-math_diagram","Diagrama"],["as-low_poly_island","Low-poly"],["as-brick_toy","Bloques"],["as-glass_product","Cristal"],["as-claymation","Plastilina"],["as-pixel_art_rpg","Pixel art RPG"],["as-silent_film","Cine mudo"],["as-newsreel","Noticiero"],["as-lidar_survey","LiDAR"],["as-microscope","Microscopio"],["as-hologram_hud","Holograma"],["as-circuit_board","Circuitos"],["as-liquid_motion","Líquido"],["as-generative_abstract","Generativo"]];
 
 /* ---------- compra ---------- */
@@ -69,7 +73,7 @@ if (hayIO) {
 }
 
 /* ---------- cinta ---------- */
-const frases = ['No vas a editar nada', 'Idea → vídeo', 'Con tu voz', 'Subtítulos y portada', '4 redes', 'Más de 180 estilos', 'En español', 'USD 29, una vez'];
+const frases = ['No vas a editar nada', 'Idea → vídeo', 'Con tu voz', 'Subtítulos y portada', '4 redes', 'Más de 80 estilos', 'En español', 'USD 29, una vez'];
 $('#cinta').innerHTML = [...frases, ...frases, ...frases, ...frases].map(f => `<span>${f}</span>`).join('');
 
 /* ---------- vídeos: solo se reproducen cuando se ven ---------- */
@@ -91,11 +95,11 @@ const vigilar = root => $$('video[data-src]', root).forEach(v => vio ? vio.obser
 const abanico = $('#abanico');
 const telefonos = $$('.telefono', abanico);
 const POS = ['t-izq', 't-centro', 't-der'];
-const enPantalla = new Set(['egipto', 'ciclovia', 'picante']);
-const estado = telefonos.map(t => ({ t, clip: POS.find(p => t.classList.contains(p)) === 't-izq' ? 'egipto' : t.classList.contains('t-der') ? 'picante' : 'ciclovia' }));
+const enPantalla = new Set(['egipto', 'ciclovia', 'canal']);
+const estado = telefonos.map(t => ({ t, clip: t.classList.contains('t-izq') ? 'egipto' : t.classList.contains('t-der') ? 'canal' : 'ciclovia' }));
 const nombreDe = n => CLIPS.find(c => c[0] === n)[1];
 function siguienteClip(actualN) {
-  const libres = CLIPS.map(c => c[0]).filter(n => !enPantalla.has(n));
+  const libres = CLIPS_HERO.filter(n => !enPantalla.has(n));
   const n = libres[Math.floor(Math.random() * libres.length)] || actualN;
   enPantalla.delete(actualN); enPantalla.add(n);
   return n;
@@ -348,7 +352,7 @@ if (comp && hayIO && !reducido) {
 /* ---------- créditos: proyectos de código abierto ---------- */
 const TERCEROS = [
   ['HyperFrames', 'HeyGen', 'Apache-2.0', 'https://github.com/heygen-com/hyperframes'],
-  ['Lemo-Opuscar', 'LemoLab', 'MIT · imágenes CC BY 4.0', 'https://github.com/lemomo-ai/lemo-opuscar'],
+  ['Lemo-Opuscar', 'LemoLab', 'pack opcional de terceros (licencia no comercial), no incluido', 'https://github.com/lemomo-ai/lemo-opuscar'],
   ['pixelfx', 'Patch', 'MIT', 'https://github.com/patch-gg/pixelfx'],
   ['video-shotcraft', 'Vincent Wei', 'Apache-2.0', 'https://github.com/Vincentwei1021/video-shotcraft'],
   ['ClaudeAnimationBase', 'John Heibel', 'MIT', 'https://github.com/JohnHeibel/ClaudeAnimationBase'],
