@@ -1,10 +1,10 @@
 /* Nilo Studio · web de venta v2 */
 
 // ── Ajustes ───────────────────────────────────────────────────────────────
-// Enlace de pago de Polar con la oferta de lanzamiento aplicada (USD 19; el descuento caduca en OFERTA_FIN).
-const CHECKOUT_URL = 'https://buy.polar.sh/polar_cl_LSKpJtHYkJBoUYkhkUfmuPF38ZyNK6PJSDJQB4RKGuD';
+// Enlace de pago de Gumroad con la oferta de lanzamiento aplicada (USD 19; el descuento caduca en OFERTA_FIN).
+const CHECKOUT_URL = 'https://gumroad.com/l/nilostudio/LANZAMIENTO';
 // Enlace de pago al precio normal (USD 29). Se usa cuando OFERTA_FIN ya pasó.
-const CHECKOUT_URL_NORMAL = 'https://buy.polar.sh/polar_cl_PXbZGP3ZDqbzF2uRcuKZURIlyVMowpbxv1TAY4TEkHP';
+const CHECKOUT_URL_NORMAL = 'https://gumroad.com/l/nilostudio';
 // Oferta de lanzamiento: termina el 1-12-2026 a las 23:59 hora de Bogotá (UTC−5).
 const OFERTA_FIN = '2026-12-02T04:59:00Z';
 const PRECIO_NORMAL = 29, PRECIO_OFERTA = 19;
