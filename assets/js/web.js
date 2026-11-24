@@ -73,7 +73,7 @@ if (hayIO) {
 }
 
 /* ---------- cinta ---------- */
-const frases = ['No vas a editar nada', 'Idea → vídeo', 'Con tu voz', 'Subtítulos y portada', '4 redes', 'Más de 80 estilos', 'En español', 'USD 29, una vez'];
+const frases = ['No vas a editar nada', 'Idea → vídeo', 'Con tu voz', 'Subtítulos y portada', '4 redes', 'Más de 180 estilos', 'En español', 'USD 29, una vez'];
 $('#cinta').innerHTML = [...frases, ...frases, ...frases, ...frases].map(f => `<span>${f}</span>`).join('');
 
 /* ---------- vídeos: solo se reproducen cuando se ven ---------- */

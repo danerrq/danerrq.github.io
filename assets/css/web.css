@@ -550,3 +550,4 @@ a { color: inherit; }
 @media (min-width: 760px) { .pie-info { grid-column: 1 / -1; } }
 .pie-info a { color: var(--texto); text-decoration: underline; text-underline-offset: 3px; }
 .pie-info a:hover { color: var(--morado-claro); }
+.nota-estilos { font-size: 12px; line-height: 1.5; color: var(--tinta-tenue); max-width: 56ch; margin-inline: auto; text-align: center; }
