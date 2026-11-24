@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nilo Studio · Tu vídeo, con un clic</title>
+<meta name="description" content="App para Mac: eliges una idea y apruebas el vídeo. La app escribe el guion, lo anima con tu voz, pone subtítulos y portada y lo programa en TikTok, Instagram, YouTube y Facebook. Más de 180 estilos. Pago único.">
+<meta name="theme-color" content="#2A0E5C">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://danerrq.github.io/nilo-studio/">
+<meta property="og:site_name" content="Nilo Studio">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Nilo Studio · No vas a editar nada">
+<meta property="og:description" content="Eliges una idea y apruebas el vídeo. La app escribe, anima con tu voz, pone subtítulos y lo programa en 4 redes. Pago único.">
+<meta property="og:image" content="https://danerrq.github.io/nilo-studio/assets/marca/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Nilo Studio: no vas a editar nada">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nilo Studio · No vas a editar nada">
+<meta name="twitter:description" content="Eliges una idea y apruebas el vídeo. La app escribe, anima, pone subtítulos y lo programa en 4 redes.">
+<meta name="twitter:image" content="https://danerrq.github.io/nilo-studio/assets/marca/og.jpg">
+<link rel="canonical" href="https://danerrq.github.io/nilo-studio/">
+<link rel="icon" href="assets/marca/simbolo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/marca/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,600&family=Unbounded:wght@700;800&display=swap">
+<link rel="stylesheet" href="assets/css/web.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+    <symbol id="i-flecha" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-mas" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></symbol>
+    <symbol id="i-chispa" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8zM19 15l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z" fill="currentColor"/></symbol>
+    <symbol id="i-casa" viewBox="0 0 24 24"><path d="M4 11l8-6.5 8 6.5V20h-5v-5h-6v5H4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-idea" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-estilos" viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="7.5" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="4" y="13" width="7" height="7" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M17 13l3.5 7h-7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-proyectos" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 9.5v5l4.5-2.5z" fill="currentColor"/></symbol>
+    <symbol id="i-capas" viewBox="0 0 24 24"><path d="M12 4l9 5-9 5-9-5zM3 14l9 5 9-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-calendario" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 3v4m8-4v4M3.5 10h17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-comentario" viewBox="0 0 24 24"><path d="M5 5h14a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H10l-5 4v-4H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-barras" viewBox="0 0 24 24"><path d="M5 20V11m7 9V5m7 15v-7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+    <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-trofeo" viewBox="0 0 24 24"><path d="M7 4h10v4a5 5 0 0 1-10 0zM7 6H4.5a2.5 2.5 0 0 0 3 3M17 6h2.5a2.5 2.5 0 0 1-3 3M12 13v3.5M8.5 20h7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-camara" viewBox="0 0 24 24"><rect x="3" y="6.5" width="13" height="11" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 10.5l5-3v9l-5-3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-texto" viewBox="0 0 24 24"><path d="M4 6.5h16M4 12h10M4 17.5h13" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+    <symbol id="i-mac" viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8.5 20h7M12 16.5V20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-escudo" viewBox="0 0 24 24"><path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.3-7.5 9.5-4.3-1.2-7.5-4.9-7.5-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-tiktok" viewBox="0 0 24 24"><path d="M14 3h3a4.5 4.5 0 0 0 4 4v3a7.4 7.4 0 0 1-4-1.2V15a6 6 0 1 1-6-6v3.2a2.8 2.8 0 1 0 3 2.8z" fill="currentColor"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.2" cy="6.8" r="1.3" fill="currentColor"/></symbol>
+    <symbol id="i-youtube" viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="4" fill="currentColor"/><path d="M10 9v6l5-3z" fill="#141316"/></symbol>
+    <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M13.5 21v-7.5H16l.5-3h-3V8.6c0-.9.3-1.6 1.6-1.6h1.5V4.3A20 20 0 0 0 14.4 4c-2.5 0-4 1.5-4 4.2v2.3H8v3h2.4V21z" fill="currentColor"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path d="M12 2.5a9.5 9.5 0 0 0-3 18.5c.5.1.7-.2.7-.5v-1.7c-2.7.6-3.2-1.2-3.2-1.2-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.3-2.1-.2-4.4-1.1-4.4-4.7 0-1 .4-1.9 1-2.6-.1-.2-.4-1.2.1-2.5 0 0 .8-.3 2.6 1a9 9 0 0 1 4.8 0c1.8-1.3 2.6-1 2.6-1 .5 1.3.2 2.3.1 2.5.6.7 1 1.6 1 2.6 0 3.7-2.3 4.5-4.4 4.7.3.3.6.9.6 1.8v2.6c0 .3.2.6.7.5A9.5 9.5 0 0 0 12 2.5z" fill="currentColor"/></symbol>
+    <symbol id="i-empresa" viewBox="0 0 24 24"><path d="M4 21V5a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v16M15 9h4a1 1 0 0 1 1 1v11M3 21h18M8 8h3M8 12h3M8 16h3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-paleta" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18c1.2 0 1.8-.8 1.8-1.7 0-.5-.2-.9-.5-1.2-.3-.3-.5-.7-.5-1.2 0-.9.8-1.7 1.7-1.7H16a5 5 0 0 0 5-5c0-4-4-7.2-9-7.2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="7.5" cy="11" r="1.4" fill="currentColor"/><circle cx="10" cy="7" r="1.4" fill="currentColor"/><circle cx="14.5" cy="7" r="1.4" fill="currentColor"/></symbol>
+    <symbol id="i-canal" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="13" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 9v5l4-2.5z" fill="currentColor"/><path d="M8 21h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-cohete" viewBox="0 0 24 24"><path d="M14 4c3-1 5.5-1 6 0 1 .5 1 3 0 6l-6 6-4-4zM10 12l-4-1-3 3 4 1M12 14l1 4-3 3-1-4M15.5 8.5h.01" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-reloj" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 9v4l2.5 2M9 2.5h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  </defs>
+</svg>
+
+<header class="barra">
+  <div class="envoltura">
+    <a class="logo" href="#inicio" aria-label="Nilo Studio, inicio"><img src="assets/marca/horizontal-fondo-oscuro.svg" alt="Nilo Studio" width="355" height="131"></a>
+    <nav aria-label="Secciones">
+      <a href="#como">Cómo funciona</a>
+      <a href="#estilos">Estilos</a>
+      <a href="#formatos">Formatos</a>
+      <a href="#precio">Precio</a>
+      <a href="#preguntas">Preguntas</a>
+    </nav>
+    <a class="btn comprar" href="#precio" data-comprar>Comprar · USD <span data-precio>29</span></a>
+  </div>
+</header>
+
+<main id="inicio">
+
+<!-- ============ HERO · morado ============ -->
+<section class="banda morado hero">
+  <div class="envoltura">
+    <div class="hero-txt">
+      <span class="pildora"><b>NUEVO</b> App para Mac · con tu plan de Claude</span>
+      <h1>No vas a <span class="tachado">editar</span> nada. La app lo hace <span class="clave sel">todo</span> por ti, con un clic.</h1>
+      <p class="bajada">Eliges una idea y apruebas el vídeo. La app escribe el guion, lo anima con tu voz, le pone subtítulos y lo deja programado en TikTok, Instagram, YouTube y Facebook.</p>
+      <div class="acciones">
+        <a class="btn comprar grande" href="#precio" data-comprar>Quiero Nilo Studio <span class="precio-btn">USD <span data-precio>29</span></span></a>
+        <a class="btn grande" href="#como"><svg aria-hidden="true"><use href="#i-play"/></svg>Verlo en acción</a>
+      </div>
+      <div class="oferta" data-oferta hidden>
+        <span class="oferta-t"><svg aria-hidden="true"><use href="#i-reloj"/></svg>Lanzamiento: <b>USD 19</b> <s>USD 29</s></span>
+        <span class="reloj" data-reloj aria-label="Tiempo que queda de oferta"><span><b data-d>0</b>d</span><span><b data-h>00</b>h</span><span><b data-m>00</b>m</span><span><b data-s>00</b>s</span></span>
+      </div>
+      <ul class="confianza">
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Pago único</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>12 meses de actualizaciones</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Garantía de 14 días</li>
+      </ul>
+    </div>
+    <div class="hero-visual">
+      <span class="globo uno" aria-hidden="true"><svg><use href="#i-chispa"/></svg>Hecho con un clic</span>
+      <!-- 3 celulares en abanico con reels reales; el del centro muestra VIDEO_DEMO_URL si existe (assets/js/web.js) -->
+      <div class="abanico" id="abanico" aria-label="Reels reales hechos con Nilo Studio">
+        <div class="telefono t-izq"><div class="muesca"></div><div class="pantalla"><img class="poster" src="assets/clips/egipto.webp" alt="" width="540" height="780"><div class="etq-estilo"><span>Pixel art</span></div></div></div>
+        <div class="telefono t-der"><div class="muesca"></div><div class="pantalla"><img class="poster" src="assets/clips/picante.webp" alt="" width="540" height="780"><div class="etq-estilo"><span>Libreta dibujada</span></div></div></div>
+        <div class="telefono t-centro"><div class="muesca"></div><div class="pantalla" id="pantalla"><img class="poster" src="assets/clips/ciclovia.webp" alt="" width="540" height="780"><div class="etq-estilo"><span>Maqueta 3D</span></div></div></div>
+      </div>
+      <span class="globo dos" aria-label="Programado en TikTok, Instagram, YouTube y Facebook"><svg class="ok"><use href="#i-check"/></svg><svg><use href="#i-tiktok"/></svg><svg><use href="#i-instagram"/></svg><svg><use href="#i-youtube"/></svg><svg><use href="#i-facebook"/></svg></span>
+      <div class="gato gato-hero" id="gato-hero" aria-hidden="true"></div>
+    </div>
+  </div>
+</section>
+
+<div class="cinta" aria-hidden="true"><div class="cinta-pista" id="cinta"></div></div>
+
+<!-- ============ FLUJO · grafito ============ -->
+<section class="banda grafito" id="como">
+  <div class="envoltura">
+    <div class="cabeza">
+      <span class="antetitulo">Así funciona por dentro</span>
+      <h2 class="h2">De una idea a <span class="clave">4 redes</span>. Sin tocar un editor.</h2>
+      <p class="bajada">La app te propone una idea. Haces un clic y el resto pasa solo. Tú solo revisas y apruebas.</p>
+    </div>
+
+    <ol class="etapas" role="tablist" aria-label="Pasos del flujo" id="etapas">
+      <li><button class="etapa" role="tab" aria-selected="true" data-e="0"><span class="linea"><i></i></span><span><em>1</em><b>Idea</b></span></button></li>
+      <li><button class="etapa" role="tab" aria-selected="false" data-e="1"><span class="linea"><i></i></span><span><em>2</em><b>Guion</b></span></button></li>
+      <li><button class="etapa" role="tab" aria-selected="false" data-e="2"><span class="linea"><i></i></span><span><em>3</em><b>Tu voz</b></span></button></li>
+      <li><button class="etapa" role="tab" aria-selected="false" data-e="3"><span class="linea"><i></i></span><span><em>4</em><b>Animación</b></span></button></li>
+      <li><button class="etapa" role="tab" aria-selected="false" data-e="4"><span class="linea"><i></i></span><span><em>5</em><b>Revisión</b></span></button></li>
+      <li><button class="etapa" role="tab" aria-selected="false" data-e="5"><span class="linea"><i></i></span><span><em>6</em><b>Programado</b></span></button></li>
+    </ol>
+
+    <div class="app" role="tabpanel" aria-live="polite">
+      <aside class="lateral" aria-hidden="true">
+        <div class="marca-app"><img src="assets/marca/horizontal-fondo-oscuro.svg" alt="" width="355" height="131"></div>
+        <span class="grupo">CREAR</span>
+        <span class="item" data-menu="inicio"><svg><use href="#i-casa"/></svg>Inicio</span>
+        <span class="item" data-menu="ideas"><svg><use href="#i-idea"/></svg>Ideas</span>
+        <span class="item" data-menu="estilos"><svg><use href="#i-estilos"/></svg>Estilos</span>
+        <span class="item" data-menu="proyectos"><svg><use href="#i-proyectos"/></svg>Proyectos</span>
+        <span class="item"><svg><use href="#i-capas"/></svg>Miniseries</span>
+        <span class="grupo">PUBLICAR</span>
+        <span class="item" data-menu="calendario"><svg><use href="#i-calendario"/></svg>Calendario</span>
+        <span class="item"><svg><use href="#i-comentario"/></svg>Comentarios<span class="n">12</span></span>
+        <span class="grupo">ANALIZAR</span>
+        <span class="item"><svg><use href="#i-barras"/></svg>Métricas</span>
+        <span class="grupo">ESTUDIO</span>
+        <span class="item" data-menu="voz"><svg><use href="#i-mic"/></svg>Voz</span>
+        <span class="item"><svg><use href="#i-trofeo"/></svg>Logros</span>
+      </aside>
+      <div class="principal">
+        <div class="tope"><span id="app-titulo">Ideas</span><span class="der"><i></i>Claude conectado</span></div>
+        <div class="escena" id="escena">
+        </div>
+        <div class="gato gato-app" id="gato-app" aria-hidden="true"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PARA QUIÉN · amarillo ============ -->
+<section class="banda amarilla" id="para-quien">
+  <div class="envoltura">
+    <div class="cabeza centro">
+      <span class="antetitulo">¿Para quién es?</span>
+      <h2 class="h2">Si haces vídeos, <span class="clave" style="color:var(--morado)">es para ti</span>.</h2>
+    </div>
+    <div class="quienes">
+      <article class="quien entra"><span class="q-ico"><svg aria-hidden="true"><use href="#i-empresa"/></svg></span><h3>Empresas</h3><p>Automatizan su contenido: las ideas, los vídeos y las publicaciones salen solos cada semana.</p></article>
+      <article class="quien entra" style="--retraso:80ms"><span class="q-ico"><svg aria-hidden="true"><use href="#i-paleta"/></svg></span><h3>Marcas</h3><p>Suben su manual de marca y cada vídeo sale con sus colores, sus tipografías y su logo.</p></article>
+      <article class="quien entra" style="--retraso:160ms"><span class="q-ico"><svg aria-hidden="true"><use href="#i-canal"/></svg></span><h3>Creadores con canal</h3><p>¿Ya tienes YouTube, TikTok o Instagram? La app copia tu forma de trabajar (tu tema, tu tono y tu estilo) desde tu chat de Claude o ChatGPT y la automatiza.</p></article>
+      <article class="quien entra" style="--retraso:240ms"><span class="q-ico"><svg aria-hidden="true"><use href="#i-cohete"/></svg></span><h3>Quien empieza de cero</h3><p>No necesitas saber nada. Eliges una idea, apruebas el vídeo y ya tienes tu primera publicación.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ESTILOS · marfil ============ -->
+<section class="banda marfil" id="estilos">
+  <div class="envoltura">
+    <div class="cabeza centro">
+      <span class="antetitulo">Lo que nadie más tiene</span>
+      <h2 class="h2">Más de 180 estilos. <span class="clave">Elige uno</span>.</h2>
+      <p class="bajada">La misma idea puede salir en el estilo que quieras. No pagas nada extra por cada vídeo.</p>
+    </div>
+    <div class="clips" id="clips" aria-label="Vídeos reales hechos con Nilo Studio"></div>
+  </div>
+  <div class="mosaico" id="mosaico" aria-hidden="true"></div>
+  <div class="envoltura">
+    <div class="contador"><b data-cuenta="180">180</b><span>estilos en la app, y van saliendo más</span></div>
+  </div>
+</section>
+
+<!-- ============ FORMATOS · grafito ============ -->
+<section class="banda grafito" id="formatos">
+  <div class="envoltura">
+    <div class="cabeza">
+      <span class="antetitulo">3 formas de usarla</span>
+      <h2 class="h2">Salgas o no en cámara, <span class="clave">te sirve</span>.</h2>
+    </div>
+    <div class="formatos">
+      <div class="opciones" role="tablist" aria-label="Formatos">
+        <button class="opcion" role="tab" aria-selected="true" data-f="0">
+          <span class="ico"><svg aria-hidden="true"><use href="#i-chispa"/></svg></span>
+          <span><h3>No quiero salir en cámara</h3><p>Escribes una idea y te devuelve un vídeo animado, con tu voz, en el estilo que elijas.</p></span>
+        </button>
+        <button class="opcion" role="tab" aria-selected="false" data-f="1">
+          <span class="ico"><svg aria-hidden="true"><use href="#i-camara"/></svg></span>
+          <span><h3>Grabo, pero odio editar</h3><p>Lo subes y te lo devuelve cortado, con ritmo y con subtítulos que no tapan tu cara.</p></span>
+        </button>
+        <button class="opcion" role="tab" aria-selected="false" data-f="2">
+          <span class="ico"><svg aria-hidden="true"><use href="#i-calendario"/></svg></span>
+          <span><h3>Ya lo tengo hecho</h3><p>Lo subes. La app lo escucha, escribe el texto de cada red y lo programa.</p></span>
+        </button>
+      </div>
+      <div class="modal-app" id="modal-formato" role="tabpanel" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NADIE MÁS · lila ============ -->
+<section class="banda lila" id="unico">
+  <div class="envoltura">
+    <div class="cabeza">
+      <h2 class="h2">Busqué una app que hiciera todo esto. <span class="clave" style="color:var(--morado)">No existía.</span></h2>
+    </div>
+    <div class="unicos">
+      <article class="unico entra"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><g class="gira"><circle cx="12" cy="12" r="3" fill="currentColor"/><path d="M12 2.5v4M12 17.5v4M2.5 12h4M17.5 12h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></g></svg></span><span><h3>+180 estilos</h3><p>Con tus colores y tu logo.</p></span></article>
+      <article class="unico entra" style="--retraso:60ms"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><g class="sube"><path d="M12 15V4m-4.5 4.5L12 4l4.5 4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g><path d="M4 14v4.5A1.5 1.5 0 0 0 5.5 20h13a1.5 1.5 0 0 0 1.5-1.5V14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span><h3>Publica en 4 redes</h3><p>Desde tu navegador, con tu propia cuenta.</p></span></article>
+      <article class="unico entra" style="--retraso:120ms"><span class="ico"><svg aria-hidden="true"><use href="#i-calendario"/></svg></span><span><h3>Calendario y resultados</h3><p>Tu semana planeada y qué vídeo funcionó mejor.</p></span></article>
+      <article class="unico entra" style="--retraso:180ms"><span class="ico"><svg aria-hidden="true"><use href="#i-trofeo"/></svg></span><span><h3>Nilo, el gato</h3><p>Logros y stickers por publicar.</p></span></article>
+      <article class="unico entra" style="--retraso:240ms"><span class="ico"><svg aria-hidden="true"><use href="#i-texto"/></svg></span><span><h3>En español</h3><p>La app, los guiones y los subtítulos.</p></span></article>
+      <article class="unico entra" style="--retraso:300ms"><span class="ico"><svg aria-hidden="true"><use href="#i-mac"/></svg></span><span><h3>Tu Mac, tu Claude</h3><p>Sin pagar otra mensualidad.</p></span></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ANTES VS. CON NILO · marfil ============ -->
+<section class="banda marfil" id="comparar">
+  <div class="envoltura">
+    <div class="cabeza centro">
+      <span class="antetitulo">Antes vs. con Nilo Studio</span>
+      <h2 class="h2">El mismo vídeo, <span class="clave">sin el trabajo</span>.</h2>
+    </div>
+    <div class="comparador" id="comparador">
+      <div class="comp-cab"><span></span><span class="antes-t">Antes</span><span class="con-t"><img src="assets/marca/simbolo.svg" alt="" width="22" height="22">Con Nilo Studio</span></div>
+      <div class="comp-fila" style="--i:0"><span class="comp-q">Hacer un vídeo</span><span class="antes"><svg aria-hidden="true"><use href="#i-x"/></svg><s>Grabas, editas, pones subtítulos, buscas música y lo exportas: unas 3 horas por vídeo.</s></span><span class="con"><svg aria-hidden="true"><use href="#i-check"/></svg>Eliges una idea y apruebas el vídeo. Lo demás lo hace la app.</span></div>
+      <div class="comp-fila" style="--i:1"><span class="comp-q">Que se vea bonito</span><span class="antes"><svg aria-hidden="true"><use href="#i-x"/></svg><s>Aprendes programas de animación difíciles o pagas a un editor.</s></span><span class="con"><svg aria-hidden="true"><use href="#i-check"/></svg>Eliges uno de los más de 180 estilos que ya vienen listos.</span></div>
+      <div class="comp-fila" style="--i:2"><span class="comp-q">Saber de qué hablar</span><span class="antes"><svg aria-hidden="true"><use href="#i-x"/></svg><s>Te quedas mirando la pantalla sin saber qué publicar.</s></span><span class="con"><svg aria-hidden="true"><use href="#i-check"/></svg>La app te propone temas de tu nicho cada semana.</span></div>
+      <div class="comp-fila" style="--i:3"><span class="comp-q">Publicar</span><span class="antes"><svg aria-hidden="true"><use href="#i-x"/></svg><s>Subes el vídeo a cada red, una por una, con su texto y su hora.</s></span><span class="con"><svg aria-hidden="true"><use href="#i-check"/></svg>Queda programado en las 4 redes a la vez.</span></div>
+      <div class="comp-fila" style="--i:4"><span class="comp-q">Lo que pagas</span><span class="antes"><svg aria-hidden="true"><use href="#i-x"/></svg><s>Varias herramientas, cada una con su mensualidad.</s></span><span class="con"><svg aria-hidden="true"><use href="#i-check"/></svg>Un solo pago. Sin mensualidades.</span></div>
+    </div>
+    <div class="sigues">
+      <a class="btn comprar grande" href="#precio">Ver el precio <svg class="flecha" aria-hidden="true"><use href="#i-flecha"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRECIO · morado ============ -->
+<section class="banda morado" id="precio">
+  <div class="envoltura">
+    <div class="cabeza centro">
+      <span class="antetitulo">Precio de lanzamiento</span>
+      <h2 class="h2">Pagas <span class="clave">una sola vez</span>.</h2>
+    </div>
+    <div class="precio">
+      <div class="tarjeta-precio entra">
+        <div class="tope"><img src="assets/marca/horizontal-fondo-oscuro.svg" alt="Nilo Studio" width="355" height="131" loading="lazy"><span>Licencia de fundador</span></div>
+        <div class="cifra"><span class="moneda">USD</span><span class="num" data-precio>29</span><span class="nota"><s class="antes-precio" data-oferta hidden>USD 29</s><b>pago único</b><span>1 licencia · 1 Mac</span></span></div>
+        <ul class="incluye">
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>La app completa para tu Mac</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Más de 180 estilos</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Los 3 formatos de vídeo</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Programación en 4 redes</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Calendario, resultados y miniseries</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>12 meses de actualizaciones</li>
+        </ul>
+        <a class="btn comprar grande bloque" href="#precio" data-comprar>Quiero Nilo Studio <span class="precio-btn">USD <span data-precio>29</span></span></a>
+        <p class="funciona"><svg aria-hidden="true"><use href="#i-mac"/></svg>Funciona en tu Mac con tu plan de Claude (Pro o Max).</p>
+        <div class="letra"><span>Después del primer año, actualizaciones opcionales por USD 39 al año. Si no renuevas, la app sigue funcionando.</span></div>
+      </div>
+      <div class="lado">
+        <div class="oferta-caja entra" data-oferta hidden>
+          <span class="oferta-et">Oferta de lanzamiento</span>
+          <p><b>USD 19</b> en lugar de USD 29 durante 7 días.</p>
+          <span class="reloj grande" data-reloj aria-label="Tiempo que queda de oferta"><span><b data-d>0</b>días</span><span><b data-h>00</b>horas</span><span><b data-m>00</b>min</span><span><b data-s>00</b>seg</span></span>
+          <small>Termina el 1 de diciembre a las 23:59 (hora de Colombia).</small>
+        </div>
+        <div class="garantia entra">
+          <div class="sello" aria-hidden="true">
+            <svg class="anillo" viewBox="0 0 104 104"><defs><path id="circulo" d="M52 52m-42 0a42 42 0 1 1 84 0a42 42 0 1 1-84 0"/></defs><text fill="#1C1B1F" font-family="Inter, sans-serif" font-size="9" font-weight="700" letter-spacing="2.4"><textPath href="#circulo">GARANTÍA · 14 DÍAS · GARANTÍA · 14 DÍAS ·</textPath></text></svg>
+            <b>14</b>
+          </div>
+          <div><h3>Garantía de 14 días</h3><p>Si no consigues hacer y programar tu primer vídeo, te devolvemos el dinero.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PREGUNTAS · grafito ============ -->
+<section class="banda grafito" id="preguntas">
+  <div class="envoltura">
+    <div class="cabeza centro"><span class="antetitulo">Preguntas</span><h2 class="h2">Al <span class="clave">grano</span>.</h2></div>
+    <div class="faq">
+      <details><summary>¿Qué necesito para usarla?<span class="mas"><svg aria-hidden="true"><use href="#i-mas"/></svg></span></summary>
+        <div class="resp"><p>Funciona en tu <b>Mac</b> con tu plan de <b>Claude Pro o Max</b>, que es el motor que escribe y anima. Por ahora no hay versión para Windows. No funciona con ChatGPT: ChatGPT solo te sirve para los prompts de nicho.</p></div></details>
+      <details><summary>¿Me pueden bloquear la cuenta?<span class="mas"><svg aria-hidden="true"><use href="#i-mas"/></svg></span></summary>
+        <div class="resp"><p>Nilo Studio publica <b>desde tu navegador, con tu sesión</b> y el programador oficial de cada red, como lo harías tú a mano. No usa bots, no guarda tus contraseñas en ningún servidor y no publica en masa.</p></div></details>
+      <details><summary>¿Cuánto cuesta Claude?<span class="mas"><svg aria-hidden="true"><use href="#i-mas"/></svg></span></summary>
+        <div class="resp"><p>Se paga aparte, a Anthropic. <b>Pro: USD 20 al mes.</b> Max: USD 100 o 200 al mes, con 5 o 20 veces más uso. Nilo Studio no cobra nada mensual.</p></div></details>
+      <details><summary>¿Cuántos vídeos salen con Pro y con Max?<span class="mas"><svg aria-hidden="true"><use href="#i-mas"/></svg></span></summary>
+        <div class="resp"><p>Depende del estilo y de la duración. <b>Con Pro, de 3 a 5 a la semana</b> en los estilos de bajo consumo. <b>Con Max</b>, suficiente para publicar a diario. La app te muestra cuánto gasta cada estilo.</p></div></details>
+      <details><summary>¿Cómo se instala?<span class="mas"><svg aria-hidden="true"><use href="#i-mas"/></svg></span></summary>
+        <div class="resp"><p>Al pagar recibes el enlace de descarga y tu clave. Abres Claude Code, le pides que instale el archivo y en unos minutos está lista. Pegas tu clave y a crear.</p></div></details>
+      <details><summary>¿En cuántos Mac la puedo usar?<span class="mas"><svg aria-hidden="true"><use href="#i-mas"/></svg></span></summary>
+        <div class="resp"><p>En <b>1 Mac</b> por licencia. Si cambias de ordenador, la desactivas en el viejo y la activas en el nuevo.</p></div></details>
+      <details><summary>¿Qué pasa después de los 12 meses?<span class="mas"><svg aria-hidden="true"><use href="#i-mas"/></svg></span></summary>
+        <div class="resp"><p>La app sigue funcionando. Si quieres seguir recibiendo arreglos y estilos nuevos, cuestan USD 39 al año. Es opcional.</p></div></details>
+      <details><summary>¿Y si no me funciona?<span class="mas"><svg aria-hidden="true"><use href="#i-mas"/></svg></span></summary>
+        <div class="resp"><p>Tienes <b>14 días de garantía</b>. Si en ese tiempo no consigues hacer y programar tu primer vídeo, escríbenos y te devolvemos el dinero.</p></div></details>
+      <details><summary>¿Por qué cuesta tan poco?<span class="mas"><svg aria-hidden="true"><use href="#i-mas"/></svg></span></summary>
+        <div class="resp"><p>Es el <b>precio de fundador</b> para los primeros clientes, mientras la app suma sus primeras reseñas. Lo pagas una vez y conservas tus 12 meses de actualizaciones.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL · morado ============ -->
+<section class="banda morado final">
+  <div class="envoltura">
+    <div class="gato" id="gato-final" role="img" aria-label="Nilo, el gato, celebrando"></div>
+    <h2>Tu próximo vídeo ya tiene <span class="clave sel">idea</span>.</h2>
+    <p class="bajada">Deja que Nilo Studio haga el resto. USD <span data-precio>29</span>, una sola vez.</p>
+    <a class="btn comprar grande" href="#precio" data-comprar>Quiero Nilo Studio <span class="precio-btn">USD <span data-precio>29</span></span></a>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ CRÉDITOS Y TECNOLOGÍA ============ -->
+<section class="creditos" id="creditos">
+  <div class="envoltura">
+    <h2>Créditos y tecnología</h2>
+    <div class="cred-rejilla">
+      <div>
+        <h3>Hecho por Nilo Studio</h3>
+        <ul class="propio">
+          <li>Automatización de un clic</li><li>Método de guiones y ganchos</li><li>Programación en 4 redes sin API</li><li>Importación de tu perfil</li><li>Kits de marca</li><li>Radar de tendencias</li><li>Calendario semanal</li><li>Métricas</li><li>Logros de Nilo, el gato</li><li>Producción por estilos</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Gracias al código abierto</h3>
+        <p class="cred-nota">Nilo Studio integra y orquesta estas herramientas; los estilos de animación se generan con ellas bajo sus licencias.</p>
+        <ul class="terceros" id="terceros"></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="pie">
+  <div class="envoltura">
+    <img src="assets/marca/horizontal-fondo-oscuro.svg" alt="Nilo Studio" width="355" height="131" loading="lazy">
+    <div></div>
+    <div class="enlaces">
+      <a href="https://www.instagram.com/daner_q/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-instagram"/></svg>Instagram</a>
+      <a href="https://github.com/danerrq" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-github"/></svg>GitHub</a>
+    </div>
+    <p class="legal">© 2026 Nilo Studio. Pago seguro con Polar. Claude es una marca de Anthropic; TikTok, Instagram, YouTube y Facebook son marcas de sus dueños. Nilo Studio no está afiliado a ninguna de ellas.</p>
+  </div>
+</footer>
+
+<div class="compra-fija" id="compra-fija" aria-hidden="true">
+  <span class="txt"><b>USD <span data-precio>29</span></b><span data-fija-sub>Pago único · garantía 14 días</span></span>
+  <a class="btn comprar" href="#precio" data-comprar tabindex="-1">Quiero Nilo Studio</a>
+</div>
+<div class="aviso" id="aviso" role="status"></div>
+
+<script src="assets/js/nilo-cat.js" defer></script>
+<script src="assets/js/animaciones.catalogo.js" defer></script>
+<script src="assets/js/web.js" defer></script>
+</body>
+</html>
