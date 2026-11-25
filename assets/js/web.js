@@ -3,7 +3,7 @@
 // ── Ajustes ───────────────────────────────────────────────────────────────
 // Planes Pro mensual y Pro anual: el mismo producto de suscripción de Gumroad (aún no existe: créalo con ese enlace).
 const PLAN_SUSCRIPCION_URL = 'https://gumroad.com/l/nilostudio-pro';
-const PLAN_MENSUAL = 9, PLAN_ANUAL = 79; // USD
+const PLAN_MENSUAL = 9.99, PLAN_ANUAL = 79; // USD
 // Sin usar: oferta de lanzamiento desactivada al pasar a planes. Se deja por si se reactiva.
 const OFERTA_FIN = '2026-12-02T04:59:00Z';
 // Vídeo demo vertical 9:16 (p. ej. 'assets/video/demo.mp4'). Vacío = rotan los ejemplos reales.
@@ -37,7 +37,7 @@ const PLANES = {
   mensual: { precio: PLAN_MENSUAL, url: PLAN_SUSCRIPCION_URL },
   anual: { precio: PLAN_ANUAL, url: PLAN_SUSCRIPCION_URL }
 };
-$$('[data-plan-precio]').forEach(el => (el.textContent = PLANES[el.dataset.planPrecio].precio));
+$$('[data-plan-precio]').forEach(el => (el.textContent = String(PLANES[el.dataset.planPrecio].precio).replace('.', ',')));
 $$('[data-plan-mes]').forEach(el => (el.textContent = (PLANES[el.dataset.planMes].precio / 12).toFixed(2).replace('.', ',')));
 $$('[data-plan]').forEach(a => { a.href = PLANES[a.dataset.plan].url; a.target = '_blank'; a.rel = 'noopener'; });
 // Enlaces a una pregunta (#contacto, #como-instalar): la abren además de llevar a ella.
@@ -59,7 +59,7 @@ if (hayIO) {
 }
 
 /* ---------- cinta ---------- */
-const frases = ['No vas a editar nada', 'Idea → vídeo', 'Con tu voz', 'Subtítulos y portada', '4 redes', 'Más de 180 estilos', 'En español', 'Desde USD 9 al mes'];
+const frases = ['No vas a editar nada', 'Idea → vídeo', 'Con tu voz', 'Subtítulos y portada', '4 redes', 'Más de 180 estilos', 'En español', 'Desde USD 9,99 al mes'];
 $('#cinta').innerHTML = [...frases, ...frases, ...frases, ...frases].map(f => `<span>${f}</span>`).join('');
 
 /* ---------- vídeos: solo se reproducen cuando se ven ---------- */
