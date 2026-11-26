@@ -55,7 +55,7 @@ const visibles = new Set();
 function alDesplazar() {
   const mostrar = scrollY > hero.offsetHeight * 0.8 && !visibles.size;
   fija.classList.toggle('visible', mostrar);
-  fija.setAttribute('aria-hidden', String(!mostrar));
+  fija.setAttribute('aria-hidden', String(!mostrar)); const en = fija.querySelector('a'); if (en) en.tabIndex = mostrar ? 0 : -1;
 }
 addEventListener('scroll', alDesplazar, { passive: true });
 if (hayIO) {
@@ -252,7 +252,8 @@ function mostrar(n, auto = true) {
   clearTimeout(ciclo);
   const dur = e.dur || (n === ETAPAS.length - 1 ? DUR + 1200 : DUR);
   etapas[n].style.setProperty('--dur', dur + 'ms');
-  if (auto && enVista && !reducido) ciclo = setTimeout(() => mostrar((actual + 1) % ETAPAS.length), dur);
+  const sig = () => $('#como').matches(':hover, :focus-within') ? (ciclo = setTimeout(sig, 800)) : mostrar((actual + 1) % ETAPAS.length);
+  if (auto && enVista && !reducido) ciclo = setTimeout(sig, dur);
 }
 etapas.forEach((b, k) => b.addEventListener('click', () => mostrar(k, false)));
 escena.innerHTML = ETAPAS[0].html();
@@ -307,7 +308,8 @@ function verFormato(n, auto = true) {
     }
   }
   clearTimeout(fCiclo);
-  if (auto && fVista && !reducido) fCiclo = setTimeout(() => verFormato((fActual + 1) % FORMATOS.length), 6500);
+  const fSig = () => $('#formatos').matches(':hover, :focus-within') ? (fCiclo = setTimeout(fSig, 800)) : verFormato((fActual + 1) % FORMATOS.length);
+  if (auto && fVista && !reducido) fCiclo = setTimeout(fSig, 6500);
 }
 opciones.forEach((o, k) => o.addEventListener('click', () => verFormato(k, false)));
 verFormato(0, false);

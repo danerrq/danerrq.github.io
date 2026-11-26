@@ -638,3 +638,15 @@ body.ver-precio #precio .planes { animation: planesEntran .5s var(--ease) both; 
 .compra-fija .apunta { width: 26px; height: 26px; color: var(--tinta); flex: none; animation: apunta 1.1s ease-in-out infinite; }
 @keyframes apunta { 0%, 100% { transform: translateX(-3px); } 50% { transform: translateX(5px); } }
 @media (prefers-reduced-motion: reduce) { .compra-fija .apunta { animation: none; } }
+
+/* 26-11: accesibilidad y lo nuevo */
+html { scroll-padding-top: 80px; scroll-padding-bottom: 96px; }
+.saltar { position: absolute; left: 12px; top: -60px; z-index: 200; padding: 10px 16px; border-radius: 10px; background: var(--amarillo); color: var(--tinta); font-weight: 700; }
+.saltar:focus { top: 12px; }
+.etapa { padding-block: 10px; }
+.opcion .op-t { display: block; font: 700 17px/1.25 var(--f-display); letter-spacing: -.02em; margin-bottom: 3px; }
+.opcion .op-d { display: block; color: var(--tenue); font-size: 14px; }
+@media (max-width: 640px) { .opcion .op-d { display: none; } }
+.hero .bajada .capcut { display: block; color: var(--amarillo); font-weight: 700; margin-bottom: 4px; }
+.banda.grafito .unicos.nuevos .unico { background: #ffffff0d; border-color: #ffffff1f; }
+.banda.grafito .unicos.nuevos .unico p { color: var(--tenue); }
