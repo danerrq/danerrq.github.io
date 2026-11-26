@@ -44,6 +44,11 @@ $$('[data-plan]').forEach(a => { a.href = PLANES[a.dataset.plan].url; a.target =
 function abrirPregunta() { const d = location.hash.length > 1 && document.getElementById(location.hash.slice(1)); if (d && d.tagName === 'DETAILS') d.open = true; }
 addEventListener('hashchange', abrirPregunta); abrirPregunta();
 
+/* ---------- precio: solo después de pulsar «Obtener app» ---------- */
+const verPrecio = () => document.body.classList.add('ver-precio');
+document.addEventListener('click', e => { if (e.target.closest('a[href="#precio"]')) verPrecio(); });
+if (location.hash === '#precio') verPrecio();
+
 /* ---------- barra de compra fija en el móvil ---------- */
 const fija = $('#compra-fija'), hero = $('.hero'), precio = $('#precio'), finalS = $('.final');
 const visibles = new Set();
@@ -59,7 +64,7 @@ if (hayIO) {
 }
 
 /* ---------- cinta ---------- */
-const frases = ['No vas a editar nada', 'Idea → vídeo', 'Con tu voz', 'Subtítulos y portada', '4 redes', 'Más de 180 estilos', 'En español', 'Desde USD 9,99 al mes'];
+const frases = ['No vas a editar nada', 'Idea → vídeo', 'Con tu voz', 'Subtítulos y portada', '4 redes', 'Más de 180 estilos', 'En español', 'Garantía de 14 días'];
 $('#cinta').innerHTML = [...frases, ...frases, ...frases, ...frases].map(f => `<span>${f}</span>`).join('');
 
 /* ---------- vídeos: solo se reproducen cuando se ven ---------- */
