@@ -646,3 +646,6 @@ html { scroll-padding-top: 80px; scroll-padding-bottom: 96px; }
 .hero .bajada .capcut { display: block; color: var(--amarillo); font-weight: 700; margin-bottom: 4px; }
 .banda.grafito .unicos.nuevos .unico { background: #ffffff0d; border-color: #ffffff1f; }
 .banda.grafito .unicos.nuevos .unico p { color: var(--tenue); }
+
+/* enlaces a las guías en el pie */
+.pie .guias { font-size: 14px; line-height: 1.7; } .pie .guias a { color: inherit; text-decoration: underline; }
