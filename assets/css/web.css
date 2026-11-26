@@ -623,10 +623,6 @@ a { color: inherit; }
 @media (max-width: 899px) { .plan.gratis { order: 2; } }
 
 /* precio oculto hasta pulsar «Obtener app» */
-body:not(.ver-precio) #precio .planes, body:not(.ver-precio) #precio .funciona { display: none; }
-#precio .sin-precio { display: flex; justify-content: center; }
-body.ver-precio #precio .sin-precio { display: none; }
-body.ver-precio #precio .planes { animation: planesEntran .5s var(--ease) both; }
 @keyframes planesEntran { from { opacity: 0; transform: translateY(14px); } }
 .compra-fija .txt b { font-size: 18px; }
 
